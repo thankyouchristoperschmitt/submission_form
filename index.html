@@ -8,7 +8,9 @@
   </head>
   <body>
     <main>
-      <h1>Thank You, Christopher Schmitt</h1>
+      <header>
+        <h1>Thank You,<br />Christopher Schmitt</h1>
+      </header>
       <blockquote class="twitter-tweet">
         <p lang="en" dir="ltr">
           Dear Friends, I have sad news.
@@ -64,34 +66,38 @@
           data-netlify="true"
           netlify-honeypot="bot-field"
         >
-          <div hidden aria-hidden="true">
+          <div class="form-wrapper">
+            <div hidden aria-hidden="true">
+              <label>
+                Don’t fill this out if you're human:
+                <input name="bot-field" />
+              </label>
+            </div>
+
+            <legend>Compose a memory</legend>
+
             <label>
-              Don’t fill this out if you're human:
-              <input name="bot-field" />
+              Your name:
+              <input type="text" name="name" required />
             </label>
+
+            <label>
+              Your email address:
+              <input type="email" name="email" required />
+            </label>
+
+            <label>
+              Your memory:
+              <textarea name="memory" cols="30" rows="10"></textarea>
+            </label>
+
+            <label>
+              Do you have a photo or other relevant file?
+              <input type="file" name="file-attachment" />
+            </label>
+
+            <button type="submit">Submit Memory</button>
           </div>
-
-          <label>
-            Your name:
-            <input type="text" name="name" required />
-          </label>
-
-          <label>
-            Your email address:
-            <input type="email" name="email" required />
-          </label>
-
-          <label>
-            Your memory:
-            <textarea name="memory" cols="30" rows="10"></textarea>
-          </label>
-
-          <label>
-            Do you have a photo or other relevant file?
-            <input type="file" name="file-attachment" />
-          </label>
-
-          <button type="submit">Submit Memory</button>
         </form>
       </article>
 
